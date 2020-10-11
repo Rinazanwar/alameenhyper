@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>AlameenHyper</title>
+
+      <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="icon" href="{% static 'img/fav.png' %}">
+
+
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+        {% include 'store/header.html' %}
+
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    <div class="depart-btn">
+                        <i class="ti-menu"></i>
+                        <span>Pages</span>
+                        <ul class="depart-hover">
+                            <li><a href="/aboutUs/">About Us</a></li>
+                            <li><a href="/contactUs/">Contact Us</a></li>
+<!--                            <li><a href="#">Underwear</a></li>-->
+<!--                            <li><a href="#">Kid's Clothing</a></li>-->
+<!--                            <li><a href="#">Brand Fashion</a></li>-->
+<!--                            <li><a href="#">Accessories/Shoes</a></li>-->
+<!--                            <li><a href="#">Luxury Brands</a></li>-->
+<!--                            <li><a href="#">Brand Outdoor Apparel</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="/store/">Store</a></li>
+                        <li><a href="/grocery/">Grocery</a>
+<!--                            <ul class="dropdown">-->
+<!--                                <li><a href="#">Men's</a></li>-->
+<!--                                <li><a href="#">Women's</a></li>-->
+<!--                                <li><a href="#">Kid's</a></li>-->
+<!--                            </ul>-->
+                        </li>
+                        <li><a href="/freshFood/">Fresh Food</a></li>
+                        <li><a href="/homeAndLiving/">Home & Living</a></li>
+                        <li><a href="/personalCare/">Personal Care</a>
+<!--                            <ul class="dropdown">-->
+<!--                                <li><a href="./blog-details.html">Blog Details</a></li>-->
+<!--                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>-->
+<!--                                <li><a href="./check-out.html">Checkout</a></li>-->
+<!--                                <li><a href="./faq.html">Faq</a></li>-->
+<!--                                <li><a href="./register.html">Register</a></li>-->
+<!--                                <li><a href="./login.html">Login</a></li>-->
+<!--                            </ul>-->
+                        </li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+        </header><!-- End .header -->
+    </div>
+
+    <!-- Product Shop Section Begin -->
+    <section class="product-shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="filter-widget">
+                        <h4 class="fw-title">Categories</h4>
+                        <ul class="filter-catagories">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">STORE</a></li>
+                            <li><a href="#">GROCERY</a></li>
+                            <li><a href="#">FRESH FOODS</a></li>
+                            <li><a href="#">HOME & LIVING</a></li>
+                            <li><a href="#">PERSONAL CARE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="product-pic-zoom">
+                                <img class="product-big-img" src="{{ item.photo.url }}" alt="">
+                                <div class="zoom-icon">
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <div class="product-thumbs">
+                                <div class="product-thumbs-track ps-slider owl-carousel">
+                                    <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
+                                            src="img/product-single/product-1.jpg" alt=""></div>
+<!--                                    <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img-->
+<!--                                            src="img/product-single/product-2.jpg" alt=""></div>-->
+<!--                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img-->
+<!--                                            src="img/product-single/product-3.jpg" alt=""></div>-->
+<!--                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img-->
+<!--                                            src="img/product-single/product-3.jpg" alt=""></div>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-details">
+                                <div class="pd-title">
+<!--                                    <span>{{ i.category }}</span>-->
+                                    <h3>{{ item.product_name }}</h3>
+<!--                                    <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>-->
+                                </div>
+                                <div class="pd-desc">
+
+                                    <h4>₹{{ item.price }} <span>₹{{ item.mrp }}</span></h4>
+                                    <p>{{ item.description }}</p>
+                                </div>
+                                <div class="pd-share">
+                                    <div class="p-code">code: {{ item.barcode }}</div>
+                                    <div class="pd-social">
+                                        <a href="#"><i class="ti-facebook"></i></a>
+                                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                                        <a href="#"><i class="ti-linkedin"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'store/footer.html' %}
+    <!-- Product Shop Section End -->
+
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.zoom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

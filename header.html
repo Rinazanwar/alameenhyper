@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>AlameenHyper</title>
+
+     <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <link rel="icon" href="{% static 'img/fav.png' %}">
+
+
+</head>
+<body>
+
+<header class="header-section">
+            <div class="header-top">
+            <div class="container">
+                <div class="ht-left" >
+
+                    <div class="mail-service">
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqSvxxZgjKbVqWZhBfNCMvSzndGRtQxmsTtzKXHTWKpRXSdSdQDtxbDGxZHwGWqRZmPXmg"><font color="black"><i class=" fa fa-envelope"></i></font></a>
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqSvxxZgjKbVqWZhBfNCMvSzndGRtQxmsTtzKXHTWKpRXSdSdQDtxbDGxZHwGWqRZmPXmg"><font color="black">alameenhyper@gmail.com</font></a>
+<!--                        <a href="#" class="primary-btn">VIEW CARD</a>-->
+                    </div>
+                    <div class="phone-service">
+                        <a href="tel:+91 8589007335"><font color="black"><i class=" fa fa-phone"></i></font></a>
+                        <a href="tel:+91 8589007335"><font color="black">+91 8589007335</font></a>
+                    </div>
+                    <div class="phone-service">
+                        <a href="tel:+91 9605333393"><font color="black"><i class=" fa fa-phone"></i></font></a>
+                        <a href="tel:+91 9605333393"><font color="black">+91 9605333393</font></a>
+                    </div>
+
+                </div>
+                <div class="ht-right">
+                <div class="top-social">
+                        <a href="https://www.instagram.com/alameen_hypermarket/?igshid=hsrrrhjexfy8"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/alameenhypermarket/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="https://chatwith.io/s/5f81eace45adf"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqSvxxZgjKbVqWZhBfNCMvSzndGRtQxmsTtzKXHTWKpRXSdSdQDtxbDGxZHwGWqRZmPXmg"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+<!--                        <a href="#"><i class="ti-pinterest"></i>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="{% static 'img/AL_CHANGED.png' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">All Categories</button>
+                            <div class="input-group">
+                                <form method="get" action= '/search/'>
+                                    <input type="text" placeholder="What do you need?" name="search" id="search">
+                                    <button type="submit"><i class="ti-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <div class="col-lg-3 text-right col-md-3">-->
+<!--                        <ul class="nav-right">-->
+<!--                            <li class="heart-icon">-->
+<!--                                <a href="#">-->
+<!--                                    <i class="icon_heart_alt"></i>-->
+<!--                                    <span>1</span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="cart-icon">-->
+<!--                                <a href="#">-->
+<!--                                    <i class="icon_bag_alt"></i>-->
+<!--                                    <span>3</span>-->
+<!--                                </a>-->
+<!--                                <div class="cart-hover">-->
+<!--                                    <div class="select-items">-->
+<!--                                        <table>-->
+<!--                                            <tbody>-->
+<!--                                                <tr>-->
+<!--                                                    <td class="si-pic"><img src="{% static 'img/select-product-1.jpg' %}" alt=""></td>-->
+<!--                                                    <td class="si-text">-->
+<!--                                                        <div class="product-selected">-->
+<!--                                                            <p>$60.00 x 1</p>-->
+<!--                                                            <h6>Kabino Bedside Table</h6>-->
+<!--                                                        </div>-->
+<!--                                                    </td>-->
+<!--                                                    <td class="si-close">-->
+<!--                                                        <i class="ti-close"></i>-->
+<!--                                                    </td>-->
+<!--                                                </tr>-->
+<!--                                                <tr>-->
+<!--                                                    <td class="si-pic"><img src="{% static 'img/select-product-2.jpg' %}" alt=""></td>-->
+<!--                                                    <td class="si-text">-->
+<!--                                                        <div class="product-selected">-->
+<!--                                                            <p>$60.00 x 1</p>-->
+<!--                                                            <h6>Kabino Bedside Table</h6>-->
+<!--                                                        </div>-->
+<!--                                                    </td>-->
+<!--                                                    <td class="si-close">-->
+<!--                                                        <i class="ti-close"></i>-->
+<!--                                                    </td>-->
+<!--                                                </tr>-->
+<!--                                            </tbody>-->
+<!--                                        </table>-->
+<!--                                    </div>-->
+<!--                                    <div class="select-total">-->
+<!--                                        <span>total:</span>-->
+<!--                                        <h5>$120.00</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="select-button">-->
+<!--                                        <a href="#" class="primary-btn view-card">VIEW CARD</a>-->
+<!--                                        <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--&lt;!&ndash;                            <li class="cart-price">$150.00</li>&ndash;&gt;-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.zoom.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
